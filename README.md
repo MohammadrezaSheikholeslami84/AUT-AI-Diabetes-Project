@@ -21,6 +21,32 @@ Students completing this project will learn to:
 * Analyze the effect of clustering on classification performance
   
 
+## 📂 Repository Structure
+
+The repository is organized to clearly separate **student materials**, **teaching resources**, and **project documentation**:
+
+```
+├── AI_Project3_StudentVersion.ipynb   # Notebook provided to students (assignment version)
+├── AI_Project3_TAVersion.ipynb        # Complete solution and reference implementation (TA version)
+├── diabetes_dataset.csv               # Clinical diabetes dataset used in the project
+├── latex_source_project-5.pdf         # Official project description (LaTeX-based assignment document)
+```
+
+### 📄 File Descriptions
+
+* **AI_Project3_StudentVersion.ipynb**
+  The notebook distributed to students. It contains the project structure, problem statements, and partially implemented sections intended to be completed as part of the assignment.
+
+* **AI_Project3_TAVersion.ipynb**
+  The complete reference solution used by the teaching assistant. This version includes full implementations, hyperparameter tuning, experimental analysis, and final results.
+
+* **diabetes_dataset.csv**
+  The raw clinical dataset used throughout the project for EDA, clustering, and classification experiments.
+
+* **latex_source_project-5.pdf**
+  The official project specification prepared using LaTeX. This document describes the problem setup, objectives, and evaluation criteria provided to students.
+
+
 ## 🩺 Dataset: Comprehensive Diabetes Clinical Dataset
 
 This project uses the **Comprehensive Diabetes Clinical Dataset**, which contains **clinical and demographic information** of patients related to diabetes.
@@ -32,9 +58,7 @@ This project uses the **Comprehensive Diabetes Clinical Dataset**, which contain
 
 The primary objective of this dataset is to analyze patient health indicators and **predict the likelihood of diabetes** based on clinical and lifestyle factors such as glucose level, BMI, hypertension, and smoking history.
 
----
-
-## 📊 Feature Description
+### 📊 Feature Description
 
 | Feature                 | Description                                                                  |
 | ----------------------- | ---------------------------------------------------------------------------- |
@@ -52,7 +76,7 @@ The primary objective of this dataset is to analyze patient health indicators an
 
 ---
 
-## 💡 Dataset Notes
+### 💡 Dataset Notes
 
 * The dataset contains a **significant class imbalance**, motivating the use of **SMOTE** during preprocessing.
 * Features include a mix of **numerical and categorical variables**, making it suitable for both EDA and machine learning experiments.
