@@ -72,24 +72,27 @@ The primary objective of this dataset is to analyze patient health indicators an
 
 ### 1. Exploratory Data Analysis (EDA)
 
-* Statistical summaries of clinical variables
-* Visualization of feature distributions
-* Identification of class imbalance in diabetes labels
+* Inspection of dataset structure, feature types, and summary statistics
+* Visualization of feature distributions and relationships
+* Analysis of class imbalance in diabetes outcomes
+
 
 ### 2. Data Preprocessing
 
-* Encoding categorical features
-* Balancing classes using **SMOTE**
-* Feature preparation for clustering and classification
+* Encoding categorical variables using label encoding
+* Handling class imbalance through **SMOTE (Synthetic Minority Over-sampling Technique)**
+* Preparing feature matrices for clustering and classification models
+
 
 ### 3. Clustering
 
-* **K-Means** clustering is applied to identify latent patient groups
-* Cluster assignments are used as additional structural information
+* **K-Means clustering** is applied to identify latent patient subgroups
+* Cluster labels are used to incorporate structural information into downstream classification tasks
 
-### 4. Classification
 
-Multiple classifiers are trained and evaluated:
+### 4. Classification Models
+
+The following supervised learning models are implemented:
 
 * XGBoost
 * Random Forest
@@ -99,7 +102,24 @@ Multiple classifiers are trained and evaluated:
 * K-Nearest Neighbors (KNN)
 * Naive Bayes
 
----
+Models are evaluated using **Accuracy, Precision, Recall, and F1-score** to account for class imbalance and clinical relevance.
+
+
+### 5. Hyperparameter Tuning
+
+To improve model performance and ensure fair comparison, **hyperparameter tuning** is performed for selected classification models.
+
+* Key hyperparameters such as tree depth, number of estimators, regularization strength, kernel parameters, and neighbor counts are systematically adjusted
+* Model configurations are optimized based on **F1-score**, prioritizing balanced performance between precision and recall
+* Tuned models demonstrate improved stability and generalization compared to default parameter settings
+
+This step highlights the importance of model optimization in real-world medical applications, where default parameters may not yield optimal results.
+
+
+### 6. Evaluation Strategy
+
+* Performance is evaluated both **with and without clustering** to assess the impact of unsupervised learning
+* Comparative analysis focuses on how clustering and hyperparameter tuning influence classification effectiveness
 
 ## 📊 Results & Discussion
 
